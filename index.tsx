@@ -2042,24 +2042,36 @@ const Navbar = ({
   isDark: boolean;
   toggleTheme: () => void;
 }) => {
+    const colors = {
+    dorado: '#AA9614',
+    gris: '#3C3C3C',
+    blanco: '#FFFFFF'
+  };
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b bg-[#3C3C3C] border-gray-700 h-16 shadow-lg">
       <div className="max-w-6xl mx-auto px-4 md:px-6 flex justify-between items-center h-full">
-        <div className="flex items-center gap-2 md:gap-4 shrink-0">
-          <div className="bg-white p-1.5 rounded-lg shadow-lg transition-transform hover:scale-110 active:scale-90 shrink-0">
-            <div className="text-[#3C3C3C] font-black text-sm md:text-xl leading-none">
-              SI TGS - Clase2
-            </div>
-          </div>
-          <div className="hidden xs:block">
-            <h1 className="text-[8px] md:text-sm font-black uppercase tracking-tighter text-white leading-tight">
-              SISTEMAS DE INFORMACIÓN
-            </h1>
-            <p className="text-[7px] md:text-[10px] font-bold text-gray-400 uppercase tracking-widest">
-              TGS - CLASE 2
-            </p>
-          </div>
-        </div>
+        <div className="flex items-center gap-3 md:gap-4 shrink-0">
+
+  <div className="bg-white p-2 md:p-2.5 rounded-lg shadow-lg transition-transform hover:scale-110 active:scale-90 shrink-0">
+    <i
+      className="fas fa-university text-lg md:text-2xl"
+      style={{ color: "#AA9614" }}
+    />
+  </div>
+
+  <div className="leading-tight">
+
+    <h1 className="text-[10px] md:text-base font-black uppercase tracking-tight text-white">
+      Sistemas de información
+    </h1>
+
+    <p className="text-[8px] md:text-xs font-bold text-gray-400 uppercase tracking-widest">
+      UNSAdA - TGS
+    </p>
+
+  </div>
+
+</div>
         <div className="flex items-center gap-1 md:gap-2">
           {[
             { id: "clase", label: "Clase", icon: BookOpen },
